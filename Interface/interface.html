@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Collect-Point | Descarte consciente</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+:root{--fundo:#021404;--azul:#0A0F25;--claro:#EAF6B7;--verde:#1CB04E;--creme:#F6F1B7}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--fundo);color:#fff;font-family:'Nunito',Arial,sans-serif}
+header{display:flex;align-items:center;justify-content:space-between;padding:22px 5%;border-bottom:1px solid #ffffff30}
+a{color:inherit;text-decoration:none}
+.marca{display:flex;align-items:center;gap:22px;font-size:30px;font-weight:800}
+.simbolo{display:flex;align-items:center;font-size:58px;line-height:1;color:var(--verde);letter-spacing:-5px}
+.folha{width:26px;height:38px;background:var(--verde);border-radius:100% 0 100% 0;transform:rotate(15deg);margin-left:12px;align-self:flex-start}
+.marca b{color:var(--verde)}
+nav{display:flex;gap:44px}
+nav a{padding:12px 4px;font-size:20px;border-bottom:3px solid transparent}
+nav a:hover,nav a:focus-visible,nav a.ativo{color:var(--verde);border-color:var(--verde)}
+.hero{max-width:1536px;margin:auto;display:grid;grid-template-columns:minmax(400px,1fr) 520px 230px;align-items:center;gap:20px;padding:0 4.5%;overflow:hidden}
+.chamada{color:var(--verde);font-size:22px;font-weight:800;letter-spacing:2px}
+h1{font-size:60px;line-height:1.12;margin:16px 0 26px;letter-spacing:-1px}
+h1 b{color:var(--verde)}
+.descricao{font-size:21px;line-height:1.65;max-width:590px}
+.arte{position:relative;width:520px;height:475px;overflow:hidden}
+.arte img{position:absolute;width:1536px;height:1024px;max-width:none;left:-660px;top:-110px}
+.categorias p{font-size:19px;margin:24px 0}
+.categorias b{color:var(--claro);font-size:28px;display:inline-block;width:42px}
+hr{border:0;border-top:1px solid #ffffff35}
+.sobre{background:#f2f5f0;color:var(--fundo);text-align:center;padding:32px 5% 65px}
+.ondas{height:22px;border-top:3px solid var(--verde);border-bottom:3px solid var(--verde);border-radius:50%;margin-bottom:42px}
+.sobre p{font-size:23px;line-height:1.5;margin:0 auto 30px}
+.links{display:flex;justify-content:center;gap:26px}
+.botao{display:flex;align-items:center;justify-content:space-between;width:360px;padding:22px 34px;border-radius:25px;background:var(--azul);color:#fff;font-size:30px;font-weight:800;border:2px solid var(--verde)}
+.botao:last-child{background:var(--verde);color:var(--fundo)}
+.botao:hover,.botao:focus-visible{outline:3px solid var(--creme);outline-offset:4px}
+@media(max-width:1250px){.hero{grid-template-columns:1fr 520px}.categorias{grid-column:1/-1;display:flex;justify-content:space-between}.categorias hr{display:none}h1{font-size:48px}}
+@media(max-width:800px){header,nav,.links{flex-wrap:wrap;gap:18px}.hero{display:flex;flex-direction:column;align-items:flex-start}.arte{align-self:center;max-width:100%}.categorias{flex-wrap:wrap;gap:20px}h1{font-size:42px}.botao{width:100%}}
+</style>
+</head>
+<body>
+<header id="inicio">
+<a class="marca" href="#inicio" aria-label="Collect-Point, início"><div class="simbolo">CP<div class="folha" aria-hidden="true"></div></div><div>Collect-<b>Point</b></div></a>
+<nav aria-label="Menu principal"><a class="ativo" href="#inicio">Início</a><a href="#sobre">Sobre</a><a href="#pontos">Pontos</a><a href="#contato">Contato</a></nav>
+</header>
+<main>
+<div class="hero">
+<div><p class="chamada">DESCARTE CONSCIENTE,<br>PONTOS PARA VOCÊ.</p><h1>Seu lixo eletrônico<br><b>vale pontos!</b></h1><p class="descricao">No Collect-Point você encontra pontos de descarte para todo tipo de lixo eletrônico, com foco em baterias de notebooks, celulares, pilhas e muito mais.</p></div>
+<div class="arte"><img src="01.jpeg" alt="Lixeira verde com celulares, baterias e eletrônicos para reciclagem"></div>
+<div class="categorias" id="pontos"><p><b>▯</b> Celulares</p><hr><p><b>▱</b> Notebooks</p><hr><p><b>ϟ</b> Pilhas e baterias</p><hr><p><b>⌁</b> E muito mais...</p></div>
+</div>
+<div class="sobre" id="sobre"><div class="ondas" aria-hidden="true"></div><p>Juntos por um futuro mais sustentável.<br>O Collect-Point conecta você a pontos de descarte de lixo eletrônico<br>e transforma resíduos em benefícios reais.</p><div class="links" id="contato"><a class="botao" href="https://github.com/">GitHub <div aria-hidden="true">→</div></a><a class="botao" href="https://trello.com/">Trello <div aria-hidden="true">→</div></a></div></div>
+</main>
+</body>
+</html>
