@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Collect-Point | Descarte consciente</title>
+<style>
+/* ===== RESET E BASE ===== */
+body {
+  margin: 0;
+  font-family: Verdana;
+  background: #021404;
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 48px;
+  background: #021404;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+}
+
+.logo-cp {
+  margin: 0;
+  font-size: 46px;
+  color: #1CB04E;
+}
+
+.folha {
+  width: 16px;
+  height: 24px;
+  background: #1CB04E;
+  border-radius: 100% 0 100% 0;
+  margin: 0 0 28px 3px;
+}
+
+.nome-marca {
+  margin: 0;
+  font-size: 26px;
+  color: white;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+}
+
+.nav-menu a {
+  font-size: 17px;
+  color: #aaa;
+}
+
+.nav-ativo {
+  color: white;
+  border: none;
+}
+
+/* Linha sob o header */
+.header-line {
+  margin: 0;
+  border: 1px solid #ffffff25;
+}
+
+/* ===== HERO ===== */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 48px 60px 48px;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.hero-texto {
+  width: 420px;
+}
+
+.chamada {
+  color: #1CB04E;
+  font-size: 16px;
+  margin: 0 0 16px 0;
+}
+
+h1 {
+  font-size: 48px;
+  margin: 0 0 24px 0;
+  color: white;
+}
+
+h1 a {
+  color: #1CB04E;
+  text-decoration: none;
+}
+
+.descricao {
+  font-size: 15px;
+  color: #bbb;
+  margin: 0;
+}
+
+/* ===== ARTE HERO ===== */
+.hero-arte {
+  width: 340px;
+  height: 340px;
+  background: #1CB04E;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icone-reciclar {
+  font-size: 140px;
+  margin: 0;
+  color: white;
+}
+
+/* Folhas decorativas ao redor da arte */
+.folhas-deco {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.folha-grande {
+  width: 30px;
+  height: 50px;
+  background: #1CB04E;
+  border-radius: 100% 0 100% 0;
+}
+
+.folha-media {
+  width: 22px;
+  height: 36px;
+  background: #0d7a32;
+  border-radius: 100% 0 100% 0;
+}
+
+/* ===== CATEGORIAS ===== */
+.categorias {
+  width: 250px;
+}
+
+.cat-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  margin: 0 0 12px 0;
+  background: #0a1f0e;
+  border-radius: 16px;
+  border: 1px solid #1a3a1e;
+}
+
+.cat-icon {
+  width: 46px;
+  height: 46px;
+  background: #1CB04E;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cat-icon p {
+  margin: 0;
+  font-size: 20px;
+}
+
+.cat-info p {
+  margin: 0;
+}
+
+.cat-titulo {
+  font-size: 13px;
+  color: white;
+  margin: 0 0 2px 0;
+}
+
+.cat-sub {
+  font-size: 11px;
+  color: #888;
+  margin: 0;
+}
+
+/* ===== SECAO MAPA ===== */
+.mapa-section {
+  padding: 60px 48px;
+  text-align: center;
+  background: #031a06;
+}
+
+.mapa-titulo {
+  font-size: 34px;
+  margin: 0 0 8px 0;
+  color: white;
+  text-align: center;
+}
+
+.mapa-titulo a {
+  color: #1CB04E;
+  text-decoration: none;
+}
+
+.mapa-sub {
+  font-size: 16px;
+  color: #aab;
+  margin: 0 0 36px 0;
+  text-align: center;
+}
+
+.mapa-area {
+  height: 420px;
+  background: #0d2810;
+  border-radius: 20px;
+  border: 2px solid #1CB04E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mapa-area p {
+  font-size: 18px;
+  margin: 0;
+  color: #1CB04E;
+}
+
+.mapa-icone {
+  font-size: 80px;
+  color: #1CB04E;
+  margin: 0;
+}
+
+.mapa-stats {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin: 36px 0 0 0;
+}
+
+.stat-num {
+  font-size: 40px;
+  color: #1CB04E;
+  margin: 0;
+  text-align: center;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #aab;
+  margin: 4px 0 0 0;
+  text-align: center;
+}
+
+/* ===== DIVISOR ===== */
+.divisor-verde {
+  margin: 0;
+  border: none;
+  height: 5px;
+  background: #1CB04E;
+}
+
+/* ===== SECAO SOBRE ===== */
+.sobre {
+  background: #f2f5f0;
+  color: #021404;
+  text-align: center;
+  padding: 28px 48px 60px 48px;
+}
+
+/* Duas linhas onduladas verdes de ponta a ponta */
+.ondas {
+  width: 100%;
+  margin: 0 0 48px 0;
+  overflow: hidden;
+}
+
+.onda {
+  display: block;
+  width: 100%;
+  height: 18px;
+  margin: 0 0 2px 0;
+  color: #087c43;
+}
+
+/* Texto da seção Sobre */
+.sobre-texto {
+  font-size: 18px;
+  color: #333;
+  margin: 0 0 36px 0;
+  text-align: center;
+}
+
+/* ===== BOTOES ===== */
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.botao-github {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+  padding: 22px 36px;
+  border-radius: 22px;
+  font-size: 24px;
+  background: #0A0F25;
+  color: white;
+  border: 2px solid #1CB04E;
+  text-decoration: none;
+}
+
+.botao-trello {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+  padding: 22px 36px;
+  border-radius: 22px;
+  font-size: 24px;
+  background: #1CB04E;
+  color: #021404;
+  border: 2px solid #1CB04E;
+  text-decoration: none;
+}
+
+.botao-icone {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #1CB04E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.botao-icone-trello {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #021404;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.botao-icone p {
+  margin: 0;
+  font-size: 16px;
+  color: white;
+}
+
+.botao-icone-trello p {
+  margin: 0;
+  font-size: 16px;
+  color: #1CB04E;
+}
+
+.seta {
+  font-size: 22px;
+  margin: 0;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #021404;
+  text-align: center;
+  padding: 28px 48px;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 13px;
+  color: #556;
+}
+
+.footer-line {
+  margin: 0;
+  border: 1px solid #ffffff10;
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<div class="header" id="inicio">
+  <div class="marca">
+    <div class="logo-area">
+      <p class="logo-cp">CP</p>
+      <div class="folha"></div>
+    </div>
+    <p class="nome-marca">Collect-<a href="#inicio" style="color: #1CB04E;">Point</a></p>
+  </div>
+  <div class="nav-menu">
+    <a href="#inicio" class="nav-ativo" style="color: white;">Inicio</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#pontos">Pontos</a>
+    <a href="#contato">Contato</a>
+  </div>
+</div>
+<hr class="header-line">
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+
+  <!-- Texto principal -->
+  <div class="hero-texto">
+    <p class="chamada">DESCARTE CONSCIENTE, PONTOS PARA VOCE.</p>
+    <h1>Seu lixo eletronico <a href="#pontos">vale pontos!</a></h1>
+    <p class="descricao">No Collect-Point voce encontra pontos de descarte para todo tipo de lixo eletronico, com foco em baterias de notebooks, celulares, pilhas e muito mais.</p>
+  </div>
+
+  <!-- Arte ilustrativa -->
+  <div class="folhas-deco">
+    <div class="folha-media" style="margin: 0 0 0 0;"></div>
+    <div class="hero-arte">
+      <p class="icone-reciclar">&#9851;</p>
+    </div>
+    <div class="folha-grande" style="margin: 0 0 0 0;"></div>
+  </div>
+
+  <!-- Categorias -->
+  <div class="categorias" id="pontos">
+    <div class="cat-card">
+      <div class="cat-icon">
+        <p>&#128241;</p>
+      </div>
+      <div class="cat-info">
+        <p class="cat-titulo">Celulares</p>
+        <p class="cat-sub">Smartphones e acessorios</p>
+      </div>
+    </div>
+
+    <div class="cat-card">
+      <div class="cat-icon">
+        <p>&#128187;</p>
+      </div>
+      <div class="cat-info">
+        <p class="cat-titulo">Notebooks</p>
+        <p class="cat-sub">Baterias e equipamentos</p>
+      </div>
+    </div>
+
+    <div class="cat-card">
+      <div class="cat-icon">
+        <p>&#128267;</p>
+      </div>
+      <div class="cat-info">
+        <p class="cat-titulo">Pilhas e baterias</p>
+        <p class="cat-sub">Todos os tipos</p>
+      </div>
+    </div>
+
+    <div class="cat-card">
+      <div class="cat-icon">
+        <p>&#9889;</p>
+      </div>
+      <div class="cat-info">
+        <p class="cat-titulo">E muito mais...</p>
+        <p class="cat-sub">Eletronicos em geral</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ===== SECAO MAPA ===== -->
+<div class="mapa-section" id="mapa-section">
+  <p class="mapa-titulo">Encontre um <a href="#mapa-section">Ponto de Coleta</a></p>
+  <p class="mapa-sub">Localize o ponto de descarte mais proximo de voce e acumule pontos!</p>
+  <div class="mapa-area">
+    <div>
+      <p class="mapa-icone">&#128506;</p>
+      <p style="margin: 0; font-size: 16px; color: #1CB04E;">Mapa interativo</p>
+      <p style="margin: 8px 0 0 0; font-size: 13px; color: #556;">Pontos de coleta em Sao Paulo</p>
+    </div>
+  </div>
+  <div class="mapa-stats">
+    <div>
+      <p class="stat-num">12</p>
+      <p class="stat-label">Pontos de coleta</p>
+    </div>
+    <div>
+      <p class="stat-num">5</p>
+      <p class="stat-label">Cidades atendidas</p>
+    </div>
+    <div>
+      <p class="stat-num">2.4k</p>
+      <p class="stat-label">Descartes realizados</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== DIVISOR ===== -->
+<hr class="divisor-verde">
+
+<!-- ===== SECAO SOBRE ===== -->
+<div class="sobre" id="sobre">
+
+  <!-- Duas ondas decorativas -->
+  <div class="ondas">
+    <svg class="onda" viewBox="0 0 1440 20" preserveAspectRatio="none">
+      <path d="M0 10 Q36 0 72 10 T144 10 T216 10 T288 10 T360 10 T432 10 T504 10 T576 10 T648 10 T720 10 T792 10 T864 10 T936 10 T1008 10 T1080 10 T1152 10 T1224 10 T1296 10 T1368 10 T1440 10" fill="none" stroke="#087c43" stroke-width="2"/>
+    </svg>
+    <svg class="onda" viewBox="0 0 1440 20" preserveAspectRatio="none">
+      <path d="M0 10 Q36 0 72 10 T144 10 T216 10 T288 10 T360 10 T432 10 T504 10 T576 10 T648 10 T720 10 T792 10 T864 10 T936 10 T1008 10 T1080 10 T1152 10 T1224 10 T1296 10 T1368 10 T1440 10" fill="none" stroke="#087c43" stroke-width="2"/>
+    </svg>
+  </div>
+
+  <p class="sobre-texto">Juntos por um futuro mais sustentavel. O Collect-Point conecta voce a pontos de descarte de lixo eletronico e transforma residuos em beneficios reais.</p>
+
+  <div class="links" id="contato">
+    <a class="botao-github" href="https://github.com/">
+      <div class="botao-icone">
+        <p>G</p>
+      </div>
+      <p style="margin: 0; font-size: 24px;">GitHub</p>
+      <p class="seta">&#8594;</p>
+    </a>
+    <a class="botao-trello" href="https://trello.com/">
+      <div class="botao-icone-trello">
+        <p>T</p>
+      </div>
+      <p style="margin: 0; font-size: 24px; color: #021404;">Trello</p>
+      <p class="seta" style="color: #021404;">&#8594;</p>
+    </a>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<hr class="footer-line">
+<div class="footer">
+  <p>&#169; 2026 Collect-Point — Descarte consciente, pontos para voce.</p>
+</div>
+
+</body>
+</html>
+'''
+
